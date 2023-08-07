@@ -8,13 +8,25 @@
     text-align: center;
     display: flex;
     align-items: center;
+
+    @include mq ("phone-wide",max) {
+        background: url('../img/banner-mobile.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: bottom center;
+        width: 100%;
+        height: 420px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+    }
+
     h1{
         color: #fff;
 
         @include mq ("phone-wide",max) {
-            margin-top: 105px;
+            margin-top: 30px;
           }
-
     }
     h3{
         color: #fff;
