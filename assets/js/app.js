@@ -40,7 +40,7 @@ $('body').append(html)
 
 
 
-$('#nav-icon3').click(function(){
+$('#nav-icon2').click(function(){
 	
 	var target = $(this).data('alvo');
 	if(!$(this).hasClass("open")){
@@ -49,7 +49,7 @@ $('#nav-icon3').click(function(){
 			$(target).animate({
 				right: '0',
 			},500,function(){
-				$("#nav-icon3").toggleClass('abrir');	
+				$("#nav-icon2").toggleClass('abrir');	
 			})	
 	}else{
 		//$("header").toggleClass('fix');	
@@ -57,7 +57,7 @@ $('#nav-icon3').click(function(){
 		$(target).animate({
 				right: '-100%',
 			},500,function(){
-				$("#nav-icon3").toggleClass('abrir');	
+				$("#nav-icon2").toggleClass('abrir');	
 			})
 	}
 	$(this).toggleClass('open');

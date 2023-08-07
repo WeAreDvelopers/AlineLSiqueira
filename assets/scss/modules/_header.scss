@@ -2,41 +2,90 @@ header{
    .linha-sup{
     background: $vinho-escuro;
     padding: 5px 0;
+
     a{
         color: $amarelo;
         text-decoration: none;
     }
    }
+
+   #nav-icon2 {
+
+    @include mq ("phone-wide",min) {
+        display: none;
+    }
+   }
+
+   .menu-mobile {
+    display: flex;
+    flex-direction: row-reverse;
+   }
+
    .linha-inf{
         background: $vinho-claro;
         padding: 15px 0;
+
         #menu{
-            ul{
-                display: flex;
-                margin: 0;
-                padding: 0;
-                gap: 15px;
-                li{
-                    list-style: none;
-                    a{
-                        color: #fff;
-                        text-decoration: none;
-                        //display: inline-block;
-                        padding: 5px 10px;
-                        border-radius: 4px;
-                        &:hover{
-                            background: $amarelo;
-                            color: $vinho-escuro;
+
+            @include mq ("phone-wide", min) {
+                ul{
+                    display: flex;
+                    margin: 0;
+                    padding: 0;
+                    gap: 15px;
+
+                    li{
+                        list-style: none;
+                        a{
+                            color: #fff;
+                            text-decoration: none;
+                            //display: inline-block;
+                            padding: 5px 10px;
+                            border-radius: 4px;
+
+                            &:hover{
+                                background: $amarelo;
+                                color: $vinho-escuro;
+                            }
                         }
                     }
                 }
             }
+            
+            @include mq ("phone-wide", max) {
+
+                position: fixed;
+                width: 100%;
+                height: 100%;
+                background: $vinho-escuro;
+                right: -100%;
+
+                ul{
+                    display: flex;
+                    flex-direction: column;
+                    text-align: center;
+                    margin: 0;
+                    padding: 0;
+                    gap: 15px;
+                    li{
+                        list-style: none;
+                        a{
+                            font-size: 20px;
+                            color: #fff;
+                            text-decoration: none;
+                            //display: inline-block;
+                            padding: 5px 10px;
+                            border-radius: 4px;
+                        }
+                    }
+                }
+            } 
         }
 
         .contato{
             float: right;
             display: inline-block;
-            background: $amarelo url(../img/whats.svg) ;
+            background: $amarelo url(../img/whats.svg);
             background-repeat: no-repeat;
             color: $vinho-escuro;
             text-decoration: none;
@@ -45,6 +94,12 @@ header{
             border: 1px solid transparent;
             background-position: 15px 10px;
             padding-left: 45px;
+
+            @include mq ("phone-wide",max) {
+                position: fixed;
+                bottom: 0;
+            }
+
             &:hover{
                background: $vinho-claro url(../img/whats-hover.svg) ;
                 border: 1px solid $amarelo;
