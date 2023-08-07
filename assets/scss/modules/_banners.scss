@@ -10,11 +10,16 @@
     align-items: center;
     h1{
         color: #fff;
+
+        @include mq ("phone-wide",max) {
+            margin-top: 105px;
+          }
+
     }
     h3{
         color: #fff;
-        width: 50%;
-        margin: 0 auto;
+        width: 100%;
+        margin: 10px auto;
     }
     .btn-brand{
         

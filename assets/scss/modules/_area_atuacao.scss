@@ -14,9 +14,20 @@
         flex-wrap: wrap;
         justify-content: space-between;
 
+        @include mq ("phone-wide",max) {
+            display: flex;
+            flex-direction: column;
+          }
+
         .card-area{
-            width: 32%;
+            width: 100%;
             margin-bottom: 50px;
+
+            @include mq ("phone-wide",min) {
+                display: flex;
+                flex-direction: column;
+                width: 32%;
+              }
 
             .img {
                 position: relative;
@@ -53,6 +64,12 @@
                     background: #f600;
                     left: 5%;
                     z-index: 1;
+
+                    @include mq ("phone-wide",max) {
+                        width: 74%;
+                        left: 13%;
+                      }
+        
                 }
 
                 img {
@@ -69,6 +86,10 @@
                 height: 110px;
                 text-align: center;
                 border-radius: 0 0 10px 10px;
+
+                @include mq ("phone-wide",max) {
+                    width: 70%;
+                  }
             }
         }
     }
